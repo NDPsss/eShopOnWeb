@@ -1,17 +1,19 @@
-﻿namespace BlazorShared.Authorization;
-
-public class ClaimValue
+﻿namespace BlazorShared.Authorization
 {
-    public ClaimValue()
-    {
-    }
 
-    public ClaimValue(string type, string value)
+    public class ClaimValue
     {
-        Type = type;
-        Value = value;
-    }
+        public ClaimValue()
+        {
+        }
 
-    public string Type { get; set; }
-    public string Value { get; set; }
+        public ClaimValue(string type, string value)
+        {
+            Type = type;
+            Value = value;
+        }
+
+        public string Type { get; set; }
+        public string Value { get; set; }
+    }
 }

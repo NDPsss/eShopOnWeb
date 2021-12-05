@@ -1,7 +1,9 @@
-﻿namespace BlazorShared.Models;
-
-public abstract class LookupData
+﻿namespace BlazorShared.Models
 {
-    public int Id { get; set; }
-    public string Name { get; set; }
+
+    public abstract class LookupData
+    {
+        public int Id { get; set; }
+        public string Name { get; set; }
+    }
 }

@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace BlazorShared.Models;
-
+namespace BlazorShared.Models
+{
 public class CreateCatalogItemRequest
 {
     public int CatalogTypeId { get; set; }
@@ -24,4 +24,5 @@ public class CreateCatalogItemRequest
     public string PictureBase64 { get; set; } = string.Empty;
     public string PictureName { get; set; } = string.Empty;
 
+}
 }

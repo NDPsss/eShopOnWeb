@@ -1,6 +1,8 @@
-﻿namespace BlazorShared.Models;
-
-public class DeleteCatalogItemResponse
+﻿namespace BlazorShared.Models
 {
-    public string Status { get; set; } = "Deleted";
+
+    public class DeleteCatalogItemResponse
+    {
+        public string Status { get; set; } = "Deleted";
+    }
 }
