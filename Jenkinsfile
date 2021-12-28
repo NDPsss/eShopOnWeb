@@ -5,9 +5,7 @@ pipeline {
         dotnet ='C:\\Program Files (x86)\\dotnet\\dotnet.exe'
         }
 
-    triggers {
-        githubPush()
-    }
+ 
     stages {
         stage('Restore packages'){
            steps{
