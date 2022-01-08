@@ -3,6 +3,7 @@ pipeline {
 
      environment {
         dotnet ='C:\\Program Files (x86)\\dotnet\\dotnet.exe'
+         sh = 'C:\Program Files\Git\usr\bin\nohup.exe'
         }
 
  
