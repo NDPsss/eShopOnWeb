@@ -27,21 +27,21 @@ pipeline {
         stage('Test: Unit Test'){
            steps {
                echo 'Unit Test'
-                bat 'dotnet test UnitTests/UnitTests.csproj --configuration Release --no-restore'
+                bat 'dotnet test tests/UnitTests/UnitTests.csproj --configuration Release --no-restore'
              }
           }
 
             stage('Test: Integration Test'){
            steps {
                echo 'Integration Test'
-                bat 'dotnet test IntegrationTests/IntegrationTests.csproj --configuration Release --no-restore'
+                bat 'dotnet test tests/IntegrationTests/IntegrationTests.csproj --configuration Release --no-restore'
              }
           }
 
            stage('Test: Functional Test'){
            steps {
                echo 'Functional Test'
-                bat 'dotnet test FunctionalTests/FunctionalTests.csproj --configuration Release --no-restore'
+                bat 'dotnet test tests/FunctionalTests/FunctionalTests.csproj --configuration Release --no-restore'
              }
           }
 
