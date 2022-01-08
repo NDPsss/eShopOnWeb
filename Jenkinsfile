@@ -47,7 +47,7 @@ pipeline {
 
         stage('Publish'){
              steps{
-               bat 'dotnet publish eShopOnWeb/eShopOnWeb.csproj --configuration Release --no-restore'
+               bat 'dotnet publish src/Web/Web.csproj --configuration Release --no-restore'
              }
         }
         stage('Deploy'){
