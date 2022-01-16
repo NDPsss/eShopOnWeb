@@ -28,7 +28,7 @@ pipeline {
         stage('Increase version') {
     steps {
         echo "${env.BUILD_NUMBER}"
-        powershell '''
+        bat '''
            $xmlFileName = "eShopOnWeb_main\\Package.appxmanifest"     
            [xml]$xmlDoc = Get-Content $xmlFileName
            $version = $xmlDoc.Package.Identity.Version
