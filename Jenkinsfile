@@ -8,6 +8,11 @@ pipeline {
 
  
     stages {
+        stage('Print variables'){
+           steps{
+               echo 'workspace == ${workspace}, buildNumber  == &{env.build_number}'
+            }
+         }
         stage('Restore packages'){
            steps{
                bat 'dotnet restore eShopOnWeb.sln'
