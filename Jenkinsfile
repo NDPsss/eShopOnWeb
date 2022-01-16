@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Print variables'){
            steps{
-               echo 'workspace == ${workspace}, buildNumber  == &{env.build_number}'
+               echo "workspace == ${workspace}, buildNumber  == &{env.build_number}"
             }
          }
         stage('Restore packages'){
@@ -20,7 +20,7 @@ pipeline {
          }
         stage('Clean'){
            steps{
-               bat 'dotnet clean eShopOnWeb.sln --configuration Release'
+              bat 'dotnet clean eShopOnWeb.sln --configuration Release'
             }
          }
         stage('Build'){
