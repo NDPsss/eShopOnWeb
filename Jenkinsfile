@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Print variables'){
            steps{
-               echo "workspace == ${workspace}, buildNumber  == &{env.build_number}"
+               echo "workspace == ${workspace}, buildNumber  == &{env.BUILD_NUMBER}"
             }
          }
         stage('Restore packages'){
