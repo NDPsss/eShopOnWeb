@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Print variables'){
            steps{
-               bat 'env.BUILD_NUMBER'
+               bat '${env.BUILD_NUMBER}'
             }
          }
         stage('Restore packages'){
