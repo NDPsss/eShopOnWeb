@@ -3,7 +3,7 @@ pipeline {
 
      environment {
         dotnet ='C:\\Program Files (x86)\\dotnet\\dotnet.exe'
-        
+        powershell ='C:\\Program Files\\PowerShell\\7\\pwsh.exe'
         }
 
  
