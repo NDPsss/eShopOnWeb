@@ -25,20 +25,7 @@ pipeline {
                bat 'dotnet build eShopOnWeb.sln --configuration Release --no-restore'
             }
          }
-        stage('Increase version') {
-    steps {
-        echo "${env.BUILD_NUMBER}"
-        bat '''
-           $xmlFileName = "eShopOnWeb_main\\Package.appxmanifest"     
-           [xml]$xmlDoc = Get-Content $xmlFileName
-           $version = $xmlDoc.Package.Identity.Version
-           $trimmedVersion = $version -replace '.[0-9]+$', '.'
-           $xmlDoc.Package.Identity.Version = $trimmedVersion + ${env:BUILD_NUMBER}
-           echo 'New version:' $xmlDoc.Package.Identity.Version
-           $xmlDoc.Save($xmlFileName)
-        '''
-     }
- }
+    
         stage('Test: Unit Test'){
            steps {
                echo 'Unit Test'
