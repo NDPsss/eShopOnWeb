@@ -70,5 +70,14 @@ pipeline {
                 echo 'deploying the application'
              }
         }
+        
+        publishHTML
+        ([allowMissing: false,
+          alwaysLinkToLastBuild: false, 
+          keepAll: true, 
+          reportDir: "E:\\Report\\", 
+          reportFiles: 'Build_report', 
+          reportName: 'HTML Report',
+          reportTitles: ''])
     }
 }
