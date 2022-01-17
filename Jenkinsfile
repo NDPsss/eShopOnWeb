@@ -57,8 +57,9 @@ pipeline {
                 echo 'deploying the application'
              }
         }
-        
-        publishHTML
+    }
+    
+       publishHTML
         ([allowMissing: false,
           alwaysLinkToLastBuild: false, 
           keepAll: true, 
@@ -66,5 +67,4 @@ pipeline {
           reportFiles: 'Build_report', 
           reportName: 'HTML Report',
           reportTitles: ''])
-    }
 }
