@@ -19,9 +19,9 @@ steps:
 - script: dotnet build --configuration $(buildconfiguration)
   displayName: 'dotnet build $(buildconfiguration)'
 
-- task: NuGetCommand@2
-  inputs:
-    restoreSolution: '$(solution)'
+# - task: NuGetCommand@2
+#   inputs:
+#     restoreSolution: '$(solution)'
 
 # - task: VSBuild@1
 #   inputs:
